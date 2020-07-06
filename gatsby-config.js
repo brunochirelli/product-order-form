@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/product-order-form',
   siteMetadata: {
     title: `Product Order Form`,
     description: `A simple product validation with Formik hosted in Netlify with Netlify Forms`,
