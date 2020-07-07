@@ -1,11 +1,11 @@
 import React from 'react';
-import SEO from '../components/seo';
+import { Container } from '@material-ui/core';
+import OrderForm from '../components/form/OrderForm';
 
-const IndexPage = () => (
-  <div>
-    <SEO title="Home" />
-    <div>Index</div>
-  </div>
+const Pedido = () => (
+  <Container maxWidth="sm" style={{ margin: '1rem auto' }}>
+    <OrderForm />
+  </Container>
 );
 
-export default IndexPage;
+export default Pedido;

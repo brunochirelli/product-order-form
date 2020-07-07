@@ -1,14 +1,18 @@
 {
-    "name": "gatsby-starter-default",
-    "private": true,
-    "description": "A simple starter to get up and developing quickly with Gatsby",
+    "name": "product-order-form",
+    "description": "Order form with validation using Formik, React, and Gatsby.js with Material UI.",
     "version": "0.1.0",
-    "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+    "author": "Bruno Chirelli <bruno@chirelli.com.br>",
     "dependencies": {
+        "@date-io/moment": "1.x",
         "@material-ui/core": "^4.11.0",
         "@material-ui/icons": "^4.9.1",
+        "@material-ui/pickers": "^3.2.10",
         "@material-ui/styles": "^4.10.0",
         "babel-plugin-styled-components": "^1.10.7",
+        "formik": "^2.1.4",
+        "formik-material-ui": "^2.0.1",
+        "formik-material-ui-pickers": "^0.0.10",
         "gatsby": "^2.23.12",
         "gatsby-image": "^2.4.9",
         "gatsby-plugin-manifest": "^2.4.14",
@@ -20,11 +24,13 @@
         "gatsby-source-filesystem": "^2.3.14",
         "gatsby-theme-material-ui": "^1.0.10",
         "gatsby-transformer-sharp": "^2.5.7",
+        "moment": "^2.27.0",
         "prop-types": "^15.7.2",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-helmet": "^6.1.0",
-        "styled-components": "^5.1.1"
+        "styled-components": "^5.1.1",
+        "yup": "^0.29.1"
     },
     "devDependencies": {
         "babel-eslint": "^9.0.0",
@@ -44,7 +50,6 @@
     "keywords": [
         "gatsby"
     ],
-    "license": "0BSD",
     "scripts": {
         "build": "gatsby build",
         "develop": "gatsby develop",
