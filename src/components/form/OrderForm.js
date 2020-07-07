@@ -55,7 +55,7 @@ const OrderForm = () => {
   const validate = values => {
     const errors = {};
 
-    // Endereço
+    // Address
     if (!values.street && tabValue === 0) {
       errors.street = 'Insira um endereço válido';
     }
@@ -66,7 +66,7 @@ const OrderForm = () => {
       errors.neighbor = 'Insira o bairro';
     }
 
-    // Quantidade
+    // Quantity
     if (values.quantity >= 100 && values.quantity < 200) {
       setPrice(50);
     } else if (values.quantity >= 200 && values.quantity < 400) {
@@ -95,7 +95,7 @@ const OrderForm = () => {
             number: '',
             neighbor: '',
             quantity: 100,
-            pick: false,
+            pick: !!tabValue,
             phone: '',
             date: moment().add(2, 'days'),
           }}
@@ -109,14 +109,22 @@ const OrderForm = () => {
             phone: Yup.string()
               .required('Phone is required')
               .matches(phoneRegExp, 'Invalid phone format'),
+            pick: Yup.bool(),
           })}
           validate={validate}
           onSubmit={(values, actions) => {
+            values.pick = !!tabValue;
+
             if (!confirmShow) {
               setConfirmShow(true);
             } else {
               values.date = values.date.format('L');
+
+              // for testing purposes //
               console.log('success...', values);
+              actions.resetForm();
+              setConfirmShow(false);
+              // ------------------- //
 
               /*
                * NETLIFY FORMS SETUP
