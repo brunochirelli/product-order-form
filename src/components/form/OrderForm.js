@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { navigate } from 'gatsby';
 
 // material-ui
 import { Card, CardContent, CardActions, Grid, Typography } from '@material-ui/core';
@@ -124,6 +125,9 @@ const OrderForm = () => {
               console.log('success...', values);
               actions.resetForm();
               setConfirmShow(false);
+              navigate('/success', {
+                state: { success: true },
+              });
               // ------------------- //
 
               /*
@@ -187,7 +191,7 @@ const OrderForm = () => {
                     R$ {price}
                   </Typography>
                   <StyledButton theme={theme} disabled={formik.isSubmitting} onClick={formik.submitForm} size="large">
-                    Order Now
+                    Submit Order
                   </StyledButton>
                 </CardActions>
               </Card>
