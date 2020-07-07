@@ -1,10 +1,9 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import React from 'react';
+import styled from 'styled-components';
+
 import { AppBar, Toolbar, Typography, useTheme } from '@material-ui/core';
-import { GitHub, Menu } from '@material-ui/icons';
-import { IconButton } from 'gatsby-theme-material-ui';
+import { GitHub } from '@material-ui/icons';
+import { IconButton, Link } from 'gatsby-theme-material-ui';
 
 const AppBarStyled = styled(AppBar)`
   background: ${({ theme }) => `linear-gradient(90deg,${theme.palette.primary.main}, ${theme.palette.secondary.main})`};
@@ -17,7 +16,13 @@ const Header = ({ siteTitle }) => {
     <header>
       <AppBarStyled position="static" theme={theme} elevation={0}>
         <Toolbar variant="dense">
-          <Typography variant="h6" color="inherit" style={{ flexGrow: 1 }}>
+          <Typography
+            variant="h6"
+            color="inherit"
+            component={Link}
+            to="/"
+            style={{ flexGrow: 1, color: 'white', textDecoration: 'none' }}
+          >
             {siteTitle}
           </Typography>
           <IconButton
@@ -33,14 +38,6 @@ const Header = ({ siteTitle }) => {
       </AppBarStyled>
     </header>
   );
-};
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
 };
 
 export default Header;
