@@ -7,8 +7,13 @@ The form will continue to evolve to simplify the inputs and give a smooth experi
 
 -   Date-Picker
 -   Validation
+-   Netlify Forms Integration
 
 ## Future Features
 
 -   Include zip code input to fasten the address inputs.
 -   Include Google Autocomplete.
+
+## Todo
+
+-   Dialog for each product
