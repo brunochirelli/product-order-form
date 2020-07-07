@@ -1,7 +1,7 @@
 {
     "extends": ["wesbos"],
     "rules": {
-        "no-console": 2,
+        "no-console": 0,
         "prettier/prettier": [
             "error",
             {
@@ -10,6 +10,7 @@
                 "printWidth": 120,
                 "tabWidth": 2
             }
-        ]
+        ],
+        "react/prop-types": false
     }
 }
