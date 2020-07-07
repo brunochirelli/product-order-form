@@ -36,7 +36,7 @@ const Confirm = ({ values, submit, setConfirmShow, confirmShow, setSubmitting })
   };
   return (
     <Dialog onClose={handleClose} open={confirmShow} scroll="body" maxWidth="sm" fullWidth>
-      <DialogTitle component="header">
+      <DialogTitle disableTypography>
         <Typography variant="h5">Check your order</Typography>
       </DialogTitle>
 
