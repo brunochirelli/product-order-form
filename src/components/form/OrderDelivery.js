@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Grid, Box, Typography, Tabs, Tab, useTheme } from '@material-ui/core';
+import { Grid, Box, Typography, Tabs, Tab } from '@material-ui/core';
 import { Field } from 'formik';
 import { TextField } from 'formik-material-ui';
 
@@ -41,8 +41,6 @@ function TabPanel(props) {
 }
 
 const OrderDelivery = ({ formik, tabValue, setTabValue }) => {
-  const theme = useTheme();
-
   const handleTabChange = (event, newValue) => {
     setTabValue(newValue);
   };
