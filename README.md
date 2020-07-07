@@ -1,4 +1,4 @@
-# An order form with Formik
+# An React order form with Formik on Gatsby.js
 
 ![Dependecies](https://img.shields.io/david/brunochirelli/product-order-form)
 ![Last commit](https://img.shields.io/github/last-commit/brunochirelli/product-order-form)
