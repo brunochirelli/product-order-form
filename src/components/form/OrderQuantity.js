@@ -6,7 +6,7 @@ import { Select } from 'formik-material-ui';
 const OrderQuantity = () => (
   <Grid item xs={6}>
     <FormControl fullWidth>
-      <InputLabel htmlFor="age-simple">Quantidade</InputLabel>
+      <InputLabel htmlFor="age-simple">Quantity</InputLabel>
       <Field component={Select} name="quantity">
         <MenuItem value={100}>100</MenuItem>
         <MenuItem value={200}>200</MenuItem>
