@@ -1,22 +1,39 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import { Button } from 'gatsby-theme-material-ui';
 import { Dialog, Card, CardContent, Typography, CardActions } from '@material-ui/core';
 import moment from 'moment';
 
+const RowStyled = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:last-of-type {
+    margin-bottom: 1rem;
+  }
+
+  .MuiTypography-body1 {
+    font-weight: 700;
+  }
+`;
+
+const DialogContentStyled = styled(DialogContent)`
+  .product-color {
+    color: ${({ theme, product }) =>
+      product.toLowerCase() === 'integral' ? theme.palette.primary.main : theme.palette.secondary.main};
+  }
+`;
 const Confirm = ({ values, submit, setConfirmShow, confirmShow, setSubmitting }) => {
+
   const handleClose = () => {
     setConfirmShow(false);
     setSubmitting(false);
   };
   return (
-    <Dialog onClose={handleClose} open={confirmShow} fullWidth>
-      <Card>
-        <CardContent>
-          <Typography variant="h5">Revise seu pedido</Typography>
-          <Typography>Nome: {values.name}</Typography>
-          <Typography>Telefone: {values.phone}</Typography>
-          <Typography>Produto: {values.product}</Typography>
-          <Typography>Quantidade: {values.quantity}</Typography>
+        <RowStyled>
+          <Typography variant="body2">Event date:</Typography>
           {values.street ? (
             <Typography>
               Endereço: {values.street}, {values.number} - {values.neighbor}
