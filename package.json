@@ -13,7 +13,7 @@
         "formik": "^2.1.4",
         "formik-material-ui": "^2.0.1",
         "formik-material-ui-pickers": "^0.0.10",
-        "gatsby": "^2.23.12",
+        "gatsby": "^4.25.7",
         "gatsby-image": "^2.4.9",
         "gatsby-plugin-manifest": "^2.4.14",
         "gatsby-plugin-material-ui": "^2.1.9",
